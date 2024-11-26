@@ -35,6 +35,24 @@
             max-width: 100%; /* Убедимся, что изображение не выходит за границы */
             height: auto; /* Пропорциональное масштабирование */
             margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s; /* Добавление плавных эффектов */
+        }
+
+        /* Эффекты при наведении на изображение */
+        a:hover img {
+            transform: scale(1.05); /* Увеличение изображения */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени */
+        }
+
+        a {
+            text-decoration: none; /* Убираем подчеркивание у ссылки */
+            color: inherit; /* Цвет текста будет совпадать с общим цветом */
+        }
+
+        p.text-note {
+            font-size: 1rem; /* Размер меньше базового */
+            margin: 10px 0 20px 0;
+            color: gray; /* Серый цвет для ненавязчивости */
         }
 
         /* Адаптивные стили для мобильных устройств */
@@ -52,9 +70,10 @@
 <body>
     <h1>Universe hear me!</h1>
     <p>Here is my BTC wallet: 18TgMzxjyhX8moqGAvtjDDjYZizg6gwQNu</p>
+    <p class="text-note">Click on the QR code below to send BTC</p>
     <!-- QR-код, обернутый в ссылку -->
     <a href="bitcoin:18TgMzxjyhX8moqGAvtjDDjYZizg6gwQNu" target="_blank">
-        <img src="qr-code.png" alt="QR Code">
+        <img src="qr-code.png" alt="Clickable QR Code">
     </a>
 </body>
 </html>
