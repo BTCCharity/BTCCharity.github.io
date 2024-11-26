@@ -25,6 +25,12 @@
             word-wrap: break-word; /* Перенос длинных строк */
         }
 
+        span {
+            word-wrap: break-word; /* Перенос длинных строк */
+            overflow-wrap: break-word; /* Поддержка на всех браузерах */
+            word-break: break-all; /* Принудительный перенос строки */
+        }
+
         img {
             max-width: 100%; /* Убедимся, что изображение не выходит за границы */
             height: auto; /* Пропорциональное масштабирование */
@@ -49,3 +55,4 @@
     <img src="qr-code.png" alt="QR Code">
 </body>
 </html>
+
