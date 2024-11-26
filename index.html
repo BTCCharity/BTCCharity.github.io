@@ -5,30 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Luck</title>
     <style>
+        /* Базовые настройки для отображения */
         body {
             background-color: white;
             color: black;
-            font-size: 5vw; /* Используем относительный размер текста */
+            font-size: 1rem; /* Базовый шрифт */
             text-align: center;
-            padding-top: 5vh; /* Отступ сверху в зависимости от высоты экрана */
+            padding: 20px;
             margin: 0;
         }
+
+        h1 {
+            font-size: 2rem; /* Заголовок чуть больше базового размера */
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2rem; /* Текст слегка больше базового */
+            word-wrap: break-word; /* Перенос длинных строк */
+        }
+
         img {
-            max-width: 80%; /* Картинка занимает максимум 80% ширины экрана */
+            max-width: 100%; /* Убедимся, что изображение не выходит за границы */
             height: auto; /* Пропорциональное масштабирование */
-            margin-top: 3vh; /* Отступ сверху */
+            margin: 20px 0;
         }
-        h1, p {
-            margin: 10px; /* Уменьшен стандартный отступ */
-        }
-        /* Адаптивные стили для экранов шириной 600px и меньше */
-        @media (max-width: 600px) {
+
+        /* Адаптивные стили для мобильных устройств */
+        @media (max-width: 768px) {
             body {
-                font-size: 6vw; /* Немного крупнее для маленьких экранов */
-                padding-top: 4vh;
+                font-size: 0.9rem; /* Уменьшаем весь текст для маленьких экранов */
             }
-            img {
-                max-width: 90%; /* Сделать картинку больше на маленьких экранах */
+
+            h1 {
+                font-size: 1.5rem; /* Меньше заголовок */
             }
         }
     </style>
