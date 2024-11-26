@@ -8,12 +8,28 @@
         body {
             background-color: white;
             color: black;
-            font-size: 32px; /* Крупные буквы */
+            font-size: 5vw; /* Используем относительный размер текста */
             text-align: center;
-            padding-top: 50px;
+            padding-top: 5vh; /* Отступ сверху в зависимости от высоты экрана */
+            margin: 0;
         }
         img {
-            margin-top: 30px;
+            max-width: 80%; /* Картинка занимает максимум 80% ширины экрана */
+            height: auto; /* Пропорциональное масштабирование */
+            margin-top: 3vh; /* Отступ сверху */
+        }
+        h1, p {
+            margin: 10px; /* Уменьшен стандартный отступ */
+        }
+        /* Адаптивные стили для экранов шириной 600px и меньше */
+        @media (max-width: 600px) {
+            body {
+                font-size: 6vw; /* Немного крупнее для маленьких экранов */
+                padding-top: 4vh;
+            }
+            img {
+                max-width: 90%; /* Сделать картинку больше на маленьких экранах */
+            }
         }
     </style>
 </head>
